@@ -60,8 +60,6 @@ window.onload = function() {
         html.style.paddingRight = scrB + 'px';
         ex1.addEventListener('wheel',function(e){
             var escr = ex1scroll+e.wheelDelta;
-            console.log(-(ex1_wrap.getBoundingClientRect().width - ex1.getBoundingClientRect().left));
-            console.log(escr)
             if(escr<=0&&escr>=-(ex1_wrap.getBoundingClientRect().width- ex1.getBoundingClientRect().left)){
                 ex1scroll += e.wheelDelta
             }
