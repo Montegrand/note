@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>깨깨오지도 연습</title>
+    <link type="text/css" rel="stylesheet" href="/css/kakaoexe.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9c358194d30b59c4f006ec0f98a6e6e9&libraries=services,clusterer,drawing"></script>
+</head>
+
+<body>
+    <h1>카카오 MAP api 연습</h1>
+    <div class="map_wrap">
+        <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
+        
+        <div id="menu_wrap" class="bg_white">
+            <div class="option">
+                <h3><strong>네바퀴</strong>로 떠나는 <strong>충북관광지도</strong></h3>
+                <div>
+                    <div>
+                        <a href="" onclick="return false;">버튼(메뉴 아이콘  제작자: ariefstudio - Flaticon)</a>
+                        <form onsubmit="return false;" id="form">
+                            <input type="text" placeholder="카테고리를 입력해주세요" value="충북" id="keyword" size="15">
+                            <button type="submit">검색하기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="checklist">
+                <div class="adress">
+                    <div class="top">
+                        <i>지역 아이콘</i><h3>시/군 검색</h3><a href="" onclick="return false;" data-chk="on"><i></i>전체 선택</a>
+                    </div>
+                    <div class="list">
+                        <a href="" onclick="return false;" data-chk="on"><i></i>청주시</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>충주시</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>제천시</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>보은군</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>옥천군</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>영동군</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>증평군</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>진천군</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>괴산군</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>음성군</a>
+                        <a href="" onclick="return false;" data-chk="on"><i></i>단양군</a>
+                    </div>
+                </div>
+                <div class="category"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/kakaoexe.js"></script>
+</body>
+
+</html>
+<!-- 핀 아이콘  제작자: Freepik - Flaticon -->
+<!-- Tick icons created by Freepik - Flaticon -->

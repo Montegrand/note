@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/js/exe.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/note.css">
+</head>
+<body>
+    <h1>연습장</h1>
+    <div>
+        <ol>
+            <li><div>자동높이조절</div></li>
+            <li><div>자동높이조절<br />세로 가운데 정렬<br /><br />자동높이조절</div></li>
+            <li><div>자동높이조절<br /><br />세로 가운데 정렬</div></li>
+        </ol>
+    </div>
+    <div class="zoom_bts">
+        <h4>화면조절</h4>
+        <ul class="zoom bt_wrap clearfix">
+            <li><button type="button" data-zoom="-1">-</button></li>
+            <li><button type="button" data-zoom="0">0</button></li>
+            <li><button type="button" data-zoom="1">+</button></li>
+        </ul>
+        <p style="text-decoration:line-through;">부모에 transform을 걸면 자식요소에 fixed 고장(기능 비움)</p>
+    </div>
+    <div class="srch">
+        <label for="search">검색</label>
+        <input id="search" type="text">
+        <ul class="data_list">
+            <li class="data on">백제(광주의 속현)</li>
+            <li class="data on">고구려(율목군)</li>
+            <li class="data on">통일신라(율진군)</li>
+            <li class="data on">고려(과주군)</li>
+            <li class="data on">조선(과천현)</li>
+            <li class="data on">일제강점기(과천군)</li>
+            <li class="data on">1914년(시흥군 남면)</li>
+            <li class="data on">1979년(시흥군 군포읍)</li>
+            <li class="data on">1989년(군포시)</li>
+        </ul>
+        <label for="search_t">검색</label>
+        <input id="search_t" type="text">
+        <table id="tabledata" class="table">
+            <caption>데이터 테이블 제목 및 요약</caption>
+            <colgroup>
+                <col />
+                <col />
+                <col />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col">연대</th>
+                    <th scope="col">연혁</th>
+                    <th scope="col">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="on">
+                    <td>고구려</td>
+                    <td>잉벌노현에 속함</td>
+                    <td> </td>
+                </tr>
+                <tr class="on">
+                    <td>1914. 3. 1</td>
+                    <td>금주현에 속함</td>
+                    <td> </td>
+                </tr>
+                <tr class="on">
+                    <td>1914. 3. 1</td>
+                    <td>금천현에 속함</td>
+                    <td></td>
+                </tr>
+                <tr class="on">
+                    <td>1914. 3. 1</td>
+                    <td>총독부령 제 111호(1913.12. 29 공포)로 금천, 안산, 과천의 3개군이 시흥군으로 통합</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="cal_opener"><a href="">달력 열기</a></div>
+    <div class="calendar">
+        <h2>달력</h2>
+        <div>
+            <h4 class="Years"></h4>
+            <h5 class="Month"></h5>
+        </div>
+        <div class="bts">
+            <a href="">지난달</a>
+            <a href="">다음달</a>
+        </div>
+        <label for="date">선택한 날짜</label>
+        <input id="date" type="text" disabled />
+        <table>
+            <caption>달력</caption>
+            <colgroup>
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+                <col />
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="scrollEventExe">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </div>
+    <div class="sf">
+        <div class="scroll_fake">
+            <div><div>
+                <p>내용용님</p>
+            </div></div>
+            <div><div>
+                <p>내용용님</p>
+            </div></div>
+            <div><div>
+                <p>내용용님</p>
+            </div></div>
+            <div><div>
+                <p>내용용님</p>
+            </div></div>
+            <div><div>
+                <p>내용용님</p>
+            </div></div>
+        </div>
+    </div>
+    <aside></aside>
+    <div>
+        <a href="" onclick="return false"></a>
+    </div>
+    <footer class="footer"></footer>
+</body>
+</html>
