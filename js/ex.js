@@ -59,11 +59,10 @@ window.onload = function() {
         scrB += html.getBoundingClientRect().width;
         html.style.paddingRight = scrB + 'px';
         ex1.addEventListener('wheel',function(e){
-            console.log(ex1.getBoundingClientRect().right)
-            console.log(ex1_wrap.getBoundingClientRect().width)
-            console.log(-(ex1_wrap.getBoundingClientRect().width - ex1.getBoundingClientRect().right))
             var escr = ex1scroll+e.wheelDelta;
-            if(escr<=0&&escr>=-(ex1_wrap.getBoundingClientRect().width) - ex1.getBoundingClientRect().right){
+            console.log(-(ex1_wrap.getBoundingClientRect().width - ex1.getBoundingClientRect().left));
+            console.log(escr)
+            if(escr<=0&&escr>=-(ex1_wrap.getBoundingClientRect().width- ex1.getBoundingClientRect().left)){
                 ex1scroll += e.wheelDelta
             }
             ex1.children.item(0).style.transform = 'translateX(' + ex1scroll + 'px)';
