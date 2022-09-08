@@ -57,7 +57,6 @@ window.onload = function() {
         var scrB = -html.getBoundingClientRect().width;
         html.classList.add('scroll_stop');
         scrB += html.getBoundingClientRect().width;
-        console.log(scrB)
         html.style.paddingRight = scrB + 'px';
         ex1.addEventListener('wheel',function(e){
             var escr = ex1scroll+e.wheelDelta;
