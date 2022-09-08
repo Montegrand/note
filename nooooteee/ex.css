@@ -1,0 +1,11 @@
+/* 홍기현 */
+
+.bt_box{padding-top:45px;text-align:center;line-height:auto;}
+.bt_box:after{display:inline-block;height:100%;vertical-align:middle;content:"";}
+.bt_box a{display:inline-block;position:relative;width:255px;height:60px;margin-right:10px;border:1px solid #dbdbe4;vertical-align:middle;}
+.bt_box a:after{display:inline-block;height:100%;vertical-align:middle;content:"";}
+.bt_box a span{display:inline-block;vertical-align:middle;}
+.bt_box a span:before{display:inline-block;position:absolute;width:15px;height:15px;background:url(/site/mayor_2022/images/program/ic_calender_down.png)50% 50%/cover no-repeat;content:"";top:calc(50% - 7.5px);right:10px;}
+.bt_box a span:after{display:inline-block;height:100%;vertical-align:middle;content:"";}
+
+/* //홍기현 */
