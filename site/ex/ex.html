@@ -236,6 +236,8 @@
                         document.getElementById('contents').className = 'page' + menukey;
                         document.getElementById('contents').innerHTML = xhr.response;
                     }
+                } else {
+                    return false;
                 }
             </script>
         </div>
