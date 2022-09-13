@@ -8,7 +8,6 @@ window.onload = function() {
             v.onclick = function() {return false}
         }
     })
-    console.log(location.search!=null)
     if(location.search!=''){
         if(document.getElementById('contents').className==='cts@@{key}'){
             location.reload();
@@ -69,8 +68,6 @@ window.onload = function() {
         })
         ex1.addEventListener('wheel',function(e){
             var escr = ex1scroll+e.wheelDelta;
-            console.log(ex1scroll)
-            console.log(e.wheelDelta)
             if(escr<=0&&escr>=-(ex1_wrap.getBoundingClientRect().width- ex1.getBoundingClientRect().left)){
                 ex1scroll += e.wheelDelta
             }
