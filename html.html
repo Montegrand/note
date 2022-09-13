@@ -4,8 +4,22 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="/js/exe.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/note.css">
+    <!-- <script src="/js/exe.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/note.css"> -->
+    <script>
+        var script = document.createElement("script")
+        var cssLink = document.createElement("link")
+        cssLink.rel = "stylesheet";
+        cssLink.type = "text/css";
+        cssLink.href = "/css/note.css";
+        script.src = "/js/exe/js";
+        if(window.location.href.match("github")){
+            cssLink.href = "/note/" + cssLink.href;
+            script.src = "/note/" + script.src;
+        }
+        document.head.appendChild(cssLink);
+        document.head.appendChild(script);
+    </script>
 </head>
 <body>
     <h1>연습장</h1>
