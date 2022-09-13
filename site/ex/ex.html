@@ -225,12 +225,10 @@
         <div id="contents" class="cts@@{key}">
             <script charset="UTF-8">
                 function getParameterByName(name) {
-                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-                        results = regex.exec(location.search);
+                    var regex = new RegExp("[\\?]" + name + "=([^&#]*)")
+                    results = regex.exec(location.search);
                     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
                 }
-
                 var menukey = getParameterByName('key');
                 var xhr = new XMLHttpRequest();
                 xhr.open('get', '/note/contents/' + menukey + '.html', true);
