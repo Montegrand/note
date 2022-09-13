@@ -4,7 +4,7 @@ window.onload = function() {
     var container = document.querySelector('.container');
     var a = document.querySelectorAll('a');
     a.forEach(function(v,n,node){
-        if(v.href.match(location.href)){
+        if(v.href.match(location.href.replace(/\?.*/, ""))){
             v.onclick = function() {return false}
         }
     })
@@ -57,7 +57,6 @@ window.onload = function() {
         let ex1_wrap = document.querySelector('.ex1_wrap')
         let ex1scroll = 0;
         var html = document.querySelector('html')
-        var scrB = -html.getBoundingClientRect().width;
         ex1.addEventListener('mouseenter',function(){
             var html = document.querySelector('html')
             var scrB = -html.getBoundingClientRect().width;
