@@ -1,4 +1,4 @@
-// window.onload = function() {
+window.onload = function() {
     let running = false;
     let btOnF = function() {
         document.querySelectorAll('a').forEach(function(v,n,node){
@@ -219,4 +219,4 @@
             window.scrollTo(0,window.scrollY + screenMove[n].getBoundingClientRect().top);
         })
     })
-// };
+};
