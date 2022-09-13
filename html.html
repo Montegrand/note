@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,27 +8,32 @@
     <link rel="stylesheet" type="text/css" href="/css/note.css" />
     <script src="/js/exe.js"></script>
     <script>
-        window.onload = function() {
-            var link = document.head.querySelectorAll('link, script');
-            if(window.location.href.match("github")){
-                link.forEach(function(v,n){
-                    if(v.href){
-                        v.href = v.href.repalce(/^.*io\//, "/note/");
-                    }else if(v.src){
-                        v.src = v.src.repalce(/^.*io\//, "/note/");
-                    }
-                })
-            }
+        var link = document.head.querySelectorAll('link, script');
+        if (window.location.href.match("github")) {
+            link.forEach(function (v, n) {
+                if (v.href) {
+                    v.href = v.href.replace(/\/\//, "").replace(/^.*io\//, "/note/");
+                } else if (v.src) {
+                    v.src = v.src.replace(/\/\//, "").replace(/^.*io\//, "/note/");
+                }
+            })
         }
     </script>
 </head>
+
 <body>
     <h1>연습장</h1>
     <div>
         <ol>
-            <li><div>자동높이조절</div></li>
-            <li><div>자동높이조절<br />세로 가운데 정렬<br /><br />자동높이조절</div></li>
-            <li><div>자동높이조절<br /><br />세로 가운데 정렬</div></li>
+            <li>
+                <div>자동높이조절</div>
+            </li>
+            <li>
+                <div>자동높이조절<br />세로 가운데 정렬<br /><br />자동높이조절</div>
+            </li>
+            <li>
+                <div>자동높이조절<br /><br />세로 가운데 정렬</div>
+            </li>
         </ol>
     </div>
     <div class="zoom_bts">
@@ -140,21 +146,31 @@
     </div>
     <div class="sf">
         <div class="scroll_fake">
-            <div><div>
-                <p>내용용님</p>
-            </div></div>
-            <div><div>
-                <p>내용용님</p>
-            </div></div>
-            <div><div>
-                <p>내용용님</p>
-            </div></div>
-            <div><div>
-                <p>내용용님</p>
-            </div></div>
-            <div><div>
-                <p>내용용님</p>
-            </div></div>
+            <div>
+                <div>
+                    <p>내용용님</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>내용용님</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>내용용님</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>내용용님</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p>내용용님</p>
+                </div>
+            </div>
         </div>
     </div>
     <aside></aside>
@@ -163,4 +179,5 @@
     </div>
     <footer class="footer"></footer>
 </body>
+
 </html>
