@@ -15,6 +15,7 @@
                     v.href = v.href.replace(/\/\//, "").replace(/^.*io\//, "/note/");
                 } else if (v.src) {
                     v.src = v.src.replace(/\/\//, "").replace(/^.*io\//, "/note/");
+                    document.head.appendChild(v);
                 }
             })
         }
