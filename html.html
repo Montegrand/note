@@ -4,8 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <script src="/js/exe.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/note.css"> -->
     <script>
         var script = document.createElement("script")
         var cssLink = document.createElement("link")
@@ -13,10 +11,9 @@
         cssLink.type = "text/css";
         cssLink.href = "/css/note.css";
         script.src = "/js/exe/js";
-        // console.log(cssLink.href.replace("//", "").replace(/.*\//,"/note/css/"))
         if(window.location.href.match("github")){
-            cssLink.href = "/note/" + cssLink.href.replace("//", "").replace(/.*\//,"/note/css/");
-            script.src = "/note/" + script.src.replace("//", "").replace(/.*\//,"/note/js/");
+            cssLink.href = cssLink.href.replace("//", "").replace(/.*\//,"/note/css/");
+            script.src = script.src.replace("//", "").replace(/.*\//,"/note/js/");
         }
         document.head.appendChild(cssLink);
         document.head.appendChild(script);
