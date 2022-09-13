@@ -13,9 +13,10 @@
         cssLink.type = "text/css";
         cssLink.href = "/css/note.css";
         script.src = "/js/exe/js";
+        // console.log(cssLink.href.replace("//", "").replace(/.*\//,"/note/css/"))
         if(window.location.href.match("github")){
-            cssLink.href = "/note/" + cssLink.href;
-            script.src = "/note/" + script.src;
+            cssLink.href = "/note/" + cssLink.href.replace("//", "").replace(/.*\//,"/note/css/");
+            script.src = "/note/" + script.src.replace("//", "").replace(/.*\//,"/note/js/");
         }
         document.head.appendChild(cssLink);
         document.head.appendChild(script);
