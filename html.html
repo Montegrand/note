@@ -4,19 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/css/note.css" />
+    <script src="/js/exe.js"></script>
     <script>
-        var script = document.createElement("script")
-        var cssLink = document.createElement("link")
-        cssLink.rel = "stylesheet";
-        cssLink.type = "text/css";
-        cssLink.href = "/css/note.css";
-        script.src = "/js/exe.js";
+        var link = document.head.querySelectorAll('link, script');
         if(window.location.href.match("github")){
-            cssLink.href = cssLink.href.replace("//", "").replace(/.*\//,"/note/css/");
-            script.src = script.src.replace("//", "").replace(/.*\//,"/note/js/");
+            link.forEach(function(v,n){
+                if(v.href){
+                    v.href = v.href.repalce(/^.*io\//, "/note/");
+                }else if(v.src){
+                    v.src = v.src.repalce(/^.*io\//, "/note/");
+                }
+            })
         }
-        document.head.appendChild(cssLink);
-        document.head.appendChild(script);
     </script>
 </head>
 <body>

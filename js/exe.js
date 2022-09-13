@@ -202,7 +202,6 @@ window.onload = function() {
     div.classList.add('wrap')
     document.querySelector('aside').appendChild(div);
     screenMove.forEach(function(v,n,node){
-        console.log(v)
         var a = document.createElement('a');
         if(n===screenMove.length-1){
             a.innerHTML = 'footer';
@@ -214,12 +213,10 @@ window.onload = function() {
         a.href = "";
         document.querySelector('aside .wrap').appendChild(a)
     })
-    console.log(window.scrollY)
     var pagebt = document.querySelectorAll('aside a');
     pagebt.forEach(function(v,n,node){
         v.addEventListener('click',function(){
             window.scrollTo(0,window.scrollY + screenMove[n].getBoundingClientRect().top);
-            console.log(screenMove[n].getBoundingClientRect().top)
         })
     })
 };
