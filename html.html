@@ -7,15 +7,17 @@
     <link rel="stylesheet" type="text/css" href="/css/note.css" />
     <script src="/js/exe.js"></script>
     <script>
-        var link = document.head.querySelectorAll('link, script');
-        if(window.location.href.match("github")){
-            link.forEach(function(v,n){
-                if(v.href){
-                    v.href = v.href.repalce(/^.*io\//, "/note/");
-                }else if(v.src){
-                    v.src = v.src.repalce(/^.*io\//, "/note/");
-                }
-            })
+        window.onload = function() {
+            var link = document.head.querySelectorAll('link, script');
+            if(window.location.href.match("github")){
+                link.forEach(function(v,n){
+                    if(v.href){
+                        v.href = v.href.repalce(/^.*io\//, "/note/");
+                    }else if(v.src){
+                        v.src = v.src.repalce(/^.*io\//, "/note/");
+                    }
+                })
+            }
         }
     </script>
 </head>
