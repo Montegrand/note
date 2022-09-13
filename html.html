@@ -5,21 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="/css/note.css" />
-    <script src="/js/exe.js"></script>
-    <script>
-        var link = document.head.querySelectorAll('link, script');
-        if (window.location.href.match("github")) {
-            link.forEach(function (v, n) {
-                if (v.href) {
-                    v.href = v.href.replace(/\/\//, "").replace(/^.*io\//, "/note/");
-                } else if (v.src) {
-                    v.src = v.src.replace(/\/\//, "").replace(/^.*io\//, "/note/");
-                }
-                document.head.appendChild(v);
-            })
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="/note/css/note.css" />
+    <script src="/note/js/exe.js"></script>
 </head>
 
 <body>
