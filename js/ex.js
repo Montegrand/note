@@ -8,8 +8,11 @@ window.onload = function() {
             v.onclick = function() {return false}
         }
     })
-    if(document.getElementById('contents').className==='cts@@{key}'){
-        location.reload();
+    console.log(location.search!=null)
+    if(location.search!=''){
+        if(document.getElementById('contents').className==='cts@@{key}'){
+            location.reload();
+        }
     }
     if(document.getElementById('contents').className==='page1211'){
         depth1_item.forEach(function(v,n,node){

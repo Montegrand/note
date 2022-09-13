@@ -222,18 +222,20 @@
         </div>
         <div id="contents" class="cts@@{key}">
             <script>
-                function getParameterByName(name) {
-                    var regex = new RegExp("[\\?]" + name + "=([^&#]*)")
-                    results = regex.exec(location.search);
-                    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-                }
-                var menukey = getParameterByName('key');
-                var xhr = new XMLHttpRequest();
-                xhr.open('get', '/note/contents/' + menukey + '.html', true);
-                xhr.send();
-                xhr.onload = () => {
-                    document.getElementById('contents').className = 'page' + menukey;
-                    document.getElementById('contents').innerHTML = xhr.response;
+                if(location.search!=''){
+                    function getParameterByName(name) {
+                        var regex = new RegExp("[\\?]" + name + "=([^&#]*)")
+                        results = regex.exec(location.search);
+                        return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                    }
+                    var menukey = getParameterByName('key');
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('get', '/note/contents/' + menukey + '.html', true);
+                    xhr.send();
+                    xhr.onload = () => {
+                        document.getElementById('contents').className = 'page' + menukey;
+                        document.getElementById('contents').innerHTML = xhr.response;
+                    }
                 }
             </script>
         </div>
