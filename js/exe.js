@@ -1,4 +1,4 @@
-document.querySelector('#contens').onload = function() {
+window.onload = function() {
     let running = false;
     let btOnF = function() {
         document.querySelectorAll('a').forEach(function(v,n,node){
