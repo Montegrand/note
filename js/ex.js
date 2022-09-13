@@ -8,6 +8,9 @@ window.onload = function() {
             v.onclick = function() {return false}
         }
     })
+    if(document.getElementById('contents').className==='cts@@{key}'){
+        location.reload();
+    }
     depth1_item.forEach(function(v,n,node){
         v.addEventListener('mouseenter',function(){
             v.children.item(0).classList.add('on');
