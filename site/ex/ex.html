@@ -1,481 +1,247 @@
 <!doctype html>
 <html lang="ko">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ex</title>
-        <link rel="stylesheet" type="text/css" href="/note/css/common.css" />
-        <link rel="stylesheet" type="text/css" href="/note/css/ex.css" />
-        <script src="/js/jquery-3.6.1.slim.min.js"></script>
-        <script src="/js/ex.js"></script>
-    </head>
-    <body>
-        <div class="header">
-            <header>
-                <h1>
-                    <a href="">
-                        <img src="/css/img/menu_icon.png" alt="logo" />
-                        <span class="skip">연습페이지</span>
-                    </a>
-                </h1>
-                <div class="gnb depth1">
-                    <ul class="clearfix depth1_list">
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴1</span></a>
-                            <div class="depth2">
-                                <ul class="clearfix depth2_list">
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴1-1</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴1-2</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴1-3</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴1-4</span></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴2</span></a>
-                            <div class="depth2">
-                                <ul class="clearfix depth2_list">
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-1</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-2</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-3</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-4</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-5</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-6</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-7</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-8</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-9</span></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴3</span></a>
-                            <div class="depth2">
-                                <ul class="clearfix depth2_list">
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-1</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-2</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-3</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-4</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-5</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-6</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-7</span></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴4</span></a>
-                            <div class="depth2">
-                                <ul class="clearfix depth2_list">
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴4-1</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴4-2</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴4-3</span></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴5</span></a>
-                            <div class="depth2">
-                                <ul class="clearfix depth2_list">
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴5-1</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴5-2</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴5-3</span></a></li>
-                                    <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴5-4</span></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </header>
-        </div>
-        <div></div>
-        <div class="container">
-            <div class="side">
-                <div class="side_title">
-                    <div class="wrapbox">
-                        <p class="title">사이드메뉴</p>
-                    </div>
-                </div>
-                <div class="side_menu">
-                    <ul class="depth1_list clearfix">
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴1</span></a>
-                            <div class="depth2">
-                                <ul class="depth2_list clearfix">
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴1-1</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴1-2</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴1-3</span></a>
-                                        <div class="depth3">
-                                            <ul class="depth3_list clearfix">
-                                                <li class="depth3_item">
-                                                    <span><a class="depth3_text" href="">메뉴1-3-1</a></span>
-                                                </li>
-                                                <li class="depth3_item">
-                                                    <span><a class="depth3_text" href="">메뉴1-3-2</a></span>
-                                                </li>
-                                                <li class="depth3_item">
-                                                    <span><a class="depth3_text" href="">메뉴1-3-3</a></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴1-4</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴2</span></a>
-                            <div class="depth2">
-                                <ul class="depth2_list clearfix">
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴2-1</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴2-2</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴2-3</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴2-4</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴2-5</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴3</span></a>
-                            <div class="depth2">
-                                <ul class="depth2_list clearfix">
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴3-1</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴3-2</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴3-3</span></a>
-                                        <div class="depth3">
-                                            <ul class="depth3_list clearfix">
-                                                <li class="depth3_item">
-                                                    <span><a class="depth3_text" href="">메뉴3-3-1</a></span>
-                                                </li>
-                                                <li class="depth3_item">
-                                                    <span><a class="depth3_text" href="">메뉴3-3-2</a></span>
-                                                </li>
-                                                <li class="depth3_item">
-                                                    <span><a class="depth3_text" href="">메뉴3-3-3</a></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴3-4</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴3-5</span></a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴4</span></a>
-                            <div class="depth2">
-                                <ul class="depth2_list clearfix">
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴4-1</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴4-2</span></a>
-                                    </li>
-                                    <li class="depth2_item">
-                                        <a class="depth2_text" href=""><span>메뉴4-3</span></a>
-                                        <div class="depth3">
-                                            <ul class="depth3_list clearfix">
-                                                <li class="depth3_item">
-                                                    <span><a class="depth3_text" href="">메뉴4-3-1</a></span>
-                                                </li>
-                                                <li class="depth3_item">
-                                                    <span><a class="depth3_text" href="">메뉴4-3-2</a></span>
-                                                </li>
-                                                <li class="depth3_item">
-                                                    <span><a class="depth3_text" href="">메뉴4-3-3</a></span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="depth1_item">
-                            <a class="depth1_text" href=""><span>메뉴5</span></a>
-                        </li>
-                    </ul>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex</title>
+    <link rel="stylesheet" type="text/css" href="/note/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="/note/css/ex.css" />
+    <!-- <script src="/note/js/jquery-3.6.1.slim.min.js"></script> -->
+    <script src="/note/js/ex.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <h1>
+                <a href="">
+                    <img src="/note/css/img/menu_icon.png" alt="logo" />
+                    <span class="skip">연습페이지</span>
+                </a>
+            </h1>
+            <div class="gnb depth1">
+                <ul class="clearfix depth1_list">
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴1</span></a>
+                        <div class="depth2">
+                            <ul class="clearfix depth2_list">
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴1-1</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴1-2</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴1-3</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴1-4</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴2</span></a>
+                        <div class="depth2">
+                            <ul class="clearfix depth2_list">
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-1</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-2</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-3</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-4</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-5</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-6</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-7</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-8</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴2-9</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴3</span></a>
+                        <div class="depth2">
+                            <ul class="clearfix depth2_list">
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-1</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-2</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-3</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-4</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-5</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-6</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴3-7</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴4</span></a>
+                        <div class="depth2">
+                            <ul class="clearfix depth2_list">
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴4-1</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴4-2</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴4-3</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴5</span></a>
+                        <div class="depth2">
+                            <ul class="clearfix depth2_list">
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴5-1</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴5-2</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴5-3</span></a></li>
+                                <li class="depth2_item"><a class="depth2_text" href=""><span>메뉴5-4</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+    <div></div>
+    <div class="container">
+        <div class="side">
+            <div class="side_title">
+                <div class="wrapbox">
+                    <p class="title">사이드메뉴</p>
                 </div>
             </div>
-            <div class="contents">
-                <div class="circle">
-                    <div></div>
-                </div>
-                <div class="ex1">
-                    <div class="ex1_wrap">
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>여어어어언습</h3>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                        <a href="">
-                            <div class="box">
-                                <div class="box_wrap">
-                                    <h3>dddd dddddddd ddddddd ddddddd ddddddd</h3>
-                                </div>
-                                <p>
-                                    내용ddddddddddddddddddddd ddddddddddd dddd ddddddd dddddddddddddd dddddd ddddd dddddddddd dddddddd
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <div class="side_menu">
+                <ul class="depth1_list clearfix">
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴1</span></a>
+                        <div class="depth2">
+                            <ul class="depth2_list clearfix">
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴1-1</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴1-2</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴1-3</span></a>
+                                    <div class="depth3">
+                                        <ul class="depth3_list clearfix">
+                                            <li class="depth3_item">
+                                                <span><a class="depth3_text" href="">메뉴1-3-1</a></span>
+                                            </li>
+                                            <li class="depth3_item">
+                                                <span><a class="depth3_text" href="">메뉴1-3-2</a></span>
+                                            </li>
+                                            <li class="depth3_item">
+                                                <span><a class="depth3_text" href="">메뉴1-3-3</a></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴1-4</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴2</span></a>
+                        <div class="depth2">
+                            <ul class="depth2_list clearfix">
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴2-1</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴2-2</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴2-3</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴2-4</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴2-5</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴3</span></a>
+                        <div class="depth2">
+                            <ul class="depth2_list clearfix">
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴3-1</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴3-2</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴3-3</span></a>
+                                    <div class="depth3">
+                                        <ul class="depth3_list clearfix">
+                                            <li class="depth3_item">
+                                                <span><a class="depth3_text" href="">메뉴3-3-1</a></span>
+                                            </li>
+                                            <li class="depth3_item">
+                                                <span><a class="depth3_text" href="">메뉴3-3-2</a></span>
+                                            </li>
+                                            <li class="depth3_item">
+                                                <span><a class="depth3_text" href="">메뉴3-3-3</a></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴3-4</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴3-5</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴4</span></a>
+                        <div class="depth2">
+                            <ul class="depth2_list clearfix">
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴4-1</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴4-2</span></a>
+                                </li>
+                                <li class="depth2_item">
+                                    <a class="depth2_text" href=""><span>메뉴4-3</span></a>
+                                    <div class="depth3">
+                                        <ul class="depth3_list clearfix">
+                                            <li class="depth3_item">
+                                                <span><a class="depth3_text" href="">메뉴4-3-1</a></span>
+                                            </li>
+                                            <li class="depth3_item">
+                                                <span><a class="depth3_text" href="">메뉴4-3-2</a></span>
+                                            </li>
+                                            <li class="depth3_item">
+                                                <span><a class="depth3_text" href="">메뉴4-3-3</a></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="depth1_item">
+                        <a class="depth1_text" href=""><span>메뉴5</span></a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </body>
+        <div id="contents" class="cts@@{key}">
+            <script charset="UTF-8">
+                function getParameterByName(name) {
+                    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+                    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                        results = regex.exec(location.search);
+                    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+                }
+
+                var menukey = getParameterByName('key');
+                var xhr = new XMLHttpRequest();
+                xhr.open('get', '/note/contents/' + menukey + '.html', true);
+                xhr.send();
+                xhr.onload = () => {
+                    document.getElementById('contents').className = 'page' + menukey;
+                    document.getElementById('contents').innerHTML = xhr.response;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
 </html>

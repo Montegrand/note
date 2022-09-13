@@ -30,6 +30,8 @@ html{overflow-x:hidden;}
 li{text-align:center;list-style:none;}
 a{color:#333;text-decoration:none;}
 .skip{font-size:0;line-height:0;}
+#contents{display:inline-block;}
+#contents > div{display:block;width:900px;}
 /* header */
 
 .header{width:100%;border-bottom:2px solid #666}
