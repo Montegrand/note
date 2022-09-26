@@ -230,15 +230,19 @@
                     }
                     var menukey = getParameterByName('key');
                     var regex = new RegExp('.*'+location.host)
+                    var contents = document.getElementById('contents');
+                    contents.className = 'page' + menukey;
                     var url = regex.exec(location.href)[0]+'/note/contents/'+menukey+'.html';
                     fetch(url)
-                      .then(response=>response.text())
-                      .then(contents=>{
+                    .then(response=>response.text())
+                    .then(contents=>{
                         var inner = new DOMParser().parseFromString(contents,"text/html").body.innerHTML;
                         var contents = document.getElementById('contents');
-                        contents.className = 'page' + menukey;
+                        document.body.appendChild(js);
                         contents.innerHTML = inner;
                     })
+                    var js = document.createElement('script');
+                    js.src='/note/js/ex.js';
                     
                     // var xhr = new XMLHttpRequest();
                     // xhr.open('get', '/note/contents/' + menukey + '.html', true)
@@ -252,7 +256,7 @@
                 </script>
         </div>
     </div>
-    <script src="/note/js/ex.js"></script>
+    <!-- <script src="/note/js/ex.js"></script> -->
 </body>
 
 </html>
