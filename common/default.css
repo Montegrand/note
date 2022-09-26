@@ -53,3 +53,5 @@ select:disabled{background-color:#ebebeb}
 @media screen and (max-width:768px){
     .skip,caption,legend{overflow:visible;font-size:3px!important}
 }
+/* 세로 가운데 정렬 */
+.middle:after{display:inline-block;height:100%;vertical-align:middle;}
