@@ -8,26 +8,27 @@ window.onload = function() {
             v.onclick = function() {return false}
         }
     })
-    if(location.search!=''){
-        if(document.getElementById('contents').className==='cts@@{key}'){
-            location.reload();
-        }
-    }
     if(document.getElementById('contents').className==='page1211'){
-        depth1_item.forEach(function(v,n,node){
-            v.addEventListener('mouseenter',function(){
-                v.children.item(0).classList.add('on');
-                v.children.item(1).classList.add('on');
-                gnbCl.style.height = v.children.item(1).getBoundingClientRect().height+'px';
-                container.classList.add('nav');
-            })
-            v.addEventListener('mouseleave',function(){
-                v.children.item(0).classList.remove('on');
-                v.children.item(1).classList.remove('on');
-                gnbCl.style.height = '0';
-                container.classList.remove('nav');
-            })
-        })
+        if(location.search!=''){
+            if(document.getElementById('contents').className==='cts@@{key}'){
+                location.reload();
+            }else{
+                depth1_item.forEach(function(v,n,node){
+                    v.addEventListener('mouseenter',function(){
+                        v.children.item(0).classList.add('on');
+                        v.children.item(1).classList.add('on');
+                        gnbCl.style.height = v.children.item(1).getBoundingClientRect().height+'px';
+                        container.classList.add('nav');
+                    })
+                    v.addEventListener('mouseleave',function(){
+                        v.children.item(0).classList.remove('on');
+                        v.children.item(1).classList.remove('on');
+                        gnbCl.style.height = '0';
+                        container.classList.remove('nav');
+                    })
+                })
+            }
+        }
     
         var side_depth1_item = document.querySelectorAll('.side_menu a.depth1_text')
         
