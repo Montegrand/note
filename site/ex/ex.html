@@ -238,11 +238,11 @@
                     .then(contents=>{
                         var inner = new DOMParser().parseFromString(contents,"text/html").body.innerHTML;
                         var contents = document.getElementById('contents');
-                        document.body.appendChild(js);
                         contents.innerHTML = inner;
                     })
                     var js = document.createElement('script');
                     js.src='/note/js/ex.js';
+                    document.body.appendChild(js);
                     
                     // var xhr = new XMLHttpRequest();
                     // xhr.open('get', '/note/contents/' + menukey + '.html', true)
