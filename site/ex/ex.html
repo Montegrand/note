@@ -239,10 +239,10 @@
                         var inner = new DOMParser().parseFromString(contents,"text/html").body.innerHTML;
                         var contents = document.getElementById('contents');
                         contents.innerHTML = inner;
+                        document.body.appendChild(js);
                     })
                     var js = document.createElement('script');
                     js.src='/note/js/ex.js';
-                    document.body.appendChild(js);
                     
                     // var xhr = new XMLHttpRequest();
                     // xhr.open('get', '/note/contents/' + menukey + '.html', true)
