@@ -1,9 +1,57 @@
-Jecheon
-Bo_eun
-Ok_cheon
-Yeong_dong
-Jeung_pyeong
-Jin_cheon
-Goe_san
-Eum_seong
-Dan_yang
+<div id="contents" class="cts@@{key}">
+    <script>
+        if(location.search!=''){
+            function getParameterByName(name) {
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)")
+                results = regex.exec(location.search);
+                return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+            }
+            var menukey = getParameterByName('key');
+            var xhr = new XMLHttpRequest();
+            xhr.open('get', '/note/contents/' + menukey + '.html', true);
+            xhr.send();
+            xhr.onload = () => {
+                document.getElementById('contents').className = 'page' + menukey;
+                document.getElementById('contents').innerHTML = xhr.response;
+            }
+        }
+    </script>
+</div>
+
+section[0].addEventListener('click',function(){
+    section_div = document.querySelectorAll('section:nth-child(1) > div');
+    section_div.forEach(function(v,n){
+        if(v.classList.contains('on')){
+            console.log(v)
+            v.style.transition = 'all 0.45s linear';
+            v.style.transform = 'scale(1.3)';
+            var con_wrap = v.querySelector('.con_wrap');
+            con_wrap.style.transition='all 0.25s linear';
+            con_wrap.style.opacity = '0';
+            con_wrap.addEventListener('transitionend',function(){
+            })
+            v.nextElementSibling.style.display='block';
+            section_div[0].addEventListener('transitionend', function () {
+                var con_wrap = v.querySelector('.con_wrap');
+                var item = document.querySelectorAll('.sec1 .on .event');
+                item.forEach(function(val,num){
+                    console.log(val)
+                    val.classList.toggle('on');
+                })
+                section_div[0].classList.remove('on');
+                section_div[0].style.display='none';
+                section_div[0].style.transition='none';
+                con_wrap.style.opacity = '1';
+                section_div[0].style.zIndex = '0';
+                section_div[1].style.transition = 'all 0.45s linear';
+                section_div[1].style.transform = 'scale(1)';
+                section_div[1].style.zIndex = '50';
+                section_div[1].style.opacity = 1;
+                section_div[1].addEventListener('transitionend',function(){
+                    section[0].appendChild(section_div[0]);
+                    section_div[1].classList.add('on');
+                })
+            })
+        }
+    })
+})

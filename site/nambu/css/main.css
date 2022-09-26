@@ -12,7 +12,7 @@
 body{overflow-x:hidden;}
 .skip{font-size:0;line-height:0;}
 .clearfix{clear:both;}
-div{font-size:0;line-height:0;}
+div{font-size:0;}
 section{font-size:0;}
 a{color:#333;}
 
@@ -200,10 +200,9 @@ footer .footer_wrap > div:last-child div{margin-top:10px;}
     section.fs_main_contents .contents_right > div{float:left;width:30%;}
     section.fs_main_contents .contents_right > div:last-child{width:70%;padding:0;}
     .banner{width:100%;}
-    
     footer .footer_wrap{width:100%;}
 }
-@media only screen and(max-width:1000px){
+@media only screen and (max-width:1000px){
     .banner{display:none;}
 }
 @media only screen and (max-width:800px){

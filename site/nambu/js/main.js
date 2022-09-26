@@ -253,7 +253,16 @@ window.onload = function () {
         bn_wrap.appendChild(bn_i_c);
     })
     var bn_item_l = (bn_item[0].getBoundingClientRect().width);
-
+    if(window.innerWidth<1200){
+        bn_item_l = (window.innerWidth - 260)/5 -4;
+    }
+    window.addEventListener('resize',function(){
+        if(window.innerWidth<1200){
+            bn_item_l = (window.innerWidth - 260)/5 -4;
+        }else{
+            bn_item_l = (bn_item[0].getBoundingClientRect().width);
+        }
+    })
     var bn_item = document.querySelectorAll('.banner .bn_wrap > a');
     bn_item.forEach(function(v,n){
         v.style.width = bn_item_l + 'px';
@@ -278,7 +287,7 @@ window.onload = function () {
                 var bn_item = document.querySelectorAll('.banner .bn_wrap > a');
                 bn_wrap.style.transform = 'translateX(0px)';
                 bn_wrap.addEventListener('transitionend', function () {
-                    bn_wrap.prepend(bn_item[bn_item.length-1])
+                    bn_wrap.prepend(bn_item[bn_item.length-1]);
                     bn_wrap.style.transform = 'translateX(' + -bn_item_l + 'px)';
                     bn_wrap.style.transition = 'none';
                 })
@@ -290,7 +299,7 @@ window.onload = function () {
                 bn_wrap.addEventListener('transitionend', function () {
                     bn_wrap.style.transform = 'translateX(' + -bn_item_l + 'px)';
                     bn_wrap.style.transition = 'none';
-                    bn_wrap.appendChild(bn_item[0])
+                    bn_wrap.appendChild(bn_item[0]);
                 })
                 bn_wrap.style.transition = 'all 0.25s linear';
             } else {

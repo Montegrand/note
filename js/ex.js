@@ -55,27 +55,30 @@ window.onload = function() {
             v.style.height = height + 'px';
         })
     
-        let ex1 = document.querySelector('.ex1');
-        let ex1_wrap = document.querySelector('.ex1_wrap')
-        let ex1scroll = 0;
-        var html = document.querySelector('html')
-        ex1.addEventListener('mouseenter',function(){
-            var html = document.querySelector('html')
-            var scrB = -html.getBoundingClientRect().width;
-            html.classList.add('scroll_stop');
-            scrB += html.getBoundingClientRect().width;
-            html.style.paddingRight = scrB + 'px';
-        })
-        ex1.addEventListener('wheel',function(e){
-            var escr = ex1scroll+e.wheelDelta;
-            if(escr<=0&&escr>=-(ex1_wrap.getBoundingClientRect().width- ex1.getBoundingClientRect().left)){
-                ex1scroll += e.wheelDelta
-            }
-            ex1.children.item(0).style.transform = 'translateX(' + ex1scroll + 'px)';
-        },{passive: true})
-        ex1.addEventListener('mouseleave',function(){
-            html.classList.remove('scroll_stop');
-            html.style.paddingRight = 0;
-        })
+        if(document.querySelector('.ex1')){
+            let ex1 = document.querySelector('.ex1');
+            let ex1_wrap = document.querySelector('.ex1_wrap');
+            let ex1scroll = 0;
+            var html = document.querySelector('html');
+    
+            ex1.addEventListener('mouseenter',function(){
+                var html = document.querySelector('html')
+                var scrB = -html.getBoundingClientRect().width;
+                html.classList.add('scroll_stop');
+                scrB += html.getBoundingClientRect().width;
+                html.style.paddingRight = scrB + 'px';
+            })
+            ex1.addEventListener('wheel',function(e){
+                var escr = ex1scroll+e.wheelDelta;
+                if(escr<=0&&escr>=-(ex1_wrap.getBoundingClientRect().width- ex1.getBoundingClientRect().left)){
+                    ex1scroll += e.wheelDelta
+                }
+                ex1.children.item(0).style.transform = 'translateX(' + ex1scroll + 'px)';
+            },{passive: true})
+            ex1.addEventListener('mouseleave',function(){
+                html.classList.remove('scroll_stop');
+                html.style.paddingRight = 0;
+            })
+        }
     }
 }
