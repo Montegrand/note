@@ -229,20 +229,27 @@
                         return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
                     }
                     var menukey = getParameterByName('key');
-                    var regex = new RegExp('.*' + location.host)
                     var contents = document.getElementById('contents');
                     contents.className = 'page' + menukey;
-                    var url = regex.exec(location.href)[0] + '/note/contents/' + menukey + '.html';
-                    fetch(url)
-                        .then(response => response.text())
-                        .then(contents => {
-                            var inner = new DOMParser().parseFromString(contents, "text/html").body.innerHTML;
-                            var contents = document.getElementById('contents');
-                            contents.innerHTML = inner;
-                            document.body.appendChild(js);
-                        })
+                    var url = location.href.match('.*'+location.host) + '/note/contents/' + menukey + '.html';
+                    async function fetchHtmlAsText(url) {
+                        return await (await fetch(url)).text();
+                    }
+                    async function importPage(target) {
+                        document.getElementById(target).innerHTML = await eval(fetchHtmlAsText(url));
+                    }
+                    importPage('contents')
                     var js = document.createElement('script');
                     js.src = '/note/js/ex.js';
+                    document.body.appendChild(js);
+                    // fetch(url)
+                    //     .then(response => response.text())
+                    //     .then(contents => {
+                    //         var inner = new DOMParser().parseFromString(contents, "text/html").body.innerHTML;
+                    //         console.log(inner)
+                    //         var contents = document.getElementById('contents');
+                    //         contents.appendChild(inner);
+                    //     })
 
                     // var xhr = new XMLHttpRequest();
                     // xhr.open('get', '/note/contents/' + menukey + '.html', true)
