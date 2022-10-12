@@ -231,33 +231,56 @@
                     var menukey = getParameterByName('key');
                     var contents = document.getElementById('contents');
                     contents.className = 'page' + menukey;
-                    var url = location.href.match('.*'+location.host) + '/note/contents/' + menukey + '.html';
+                    var url = location.href.replace('site/ex/ex.html?key=', 'contents/') + '.html';
+                    // fetch(url)
+                    //     .then(res=>res.text())
+                    //     .then(resp=>{
+                    //         var content = new DOMParser().parseFromString(resp,"text/html").body.querySelector('div');
+                    //         console.log(content);
+                    //         contents.appendChild(content);
+                    //         var js = document.createElement('script');
+                    //         js.src = '/note/js/ex.js';
+                    //         document.body.appendChild(js);
+                    //         contents.querySelector('script').remove();
+                    //     })
+
+                    // async function fetchHtmlAsText(url) {
+                    //     return await (await fetch(url)).text();
+                    // }
+                    // async function importPage(target) {
+                    //     document.getElementById(target).innerHTML = await fetchHtmlAsText(url);
+                    //     var js = document.createElement('script');
+                    //     js.src = '/note/js/ex.js';
+                    //     document.body.appendChild(js);
+                    // }
+                    // importPage('contents')
+
                     async function fetchHtmlAsText(url) {
                         return await (await fetch(url)).text();
                     }
                     async function importPage(target) {
-                        document.getElementById(target).innerHTML = await fetchHtmlAsText(url);
-                        var js = document.createElement('script');
-                        js.src = '/note/js/ex.js';
-                        document.body.appendChild(js);
+                        var content = new DOMParser().parseFromString(await fetchHtmlAsText(url),"text/html").body.querySelector('div');
+                        contents.append(content);
+                        if(content.querySelector('script')){
+                            let script = content.querySelectorAll('script');
+                            script.forEach(function(v,n){
+                                let js = document.createElement('script');
+                                js.src = v.src;
+                                contents.append(js);
+                            })
+                        }
                     }
-                    importPage('contents')
-                    // fetch(url)
-                    //     .then(response => response.text())
-                    //     .then(contents => {
-                    //         var inner = new DOMParser().parseFromString(contents, "text/html").body.innerHTML;
-                    //         console.log(inner)
-                    //         var contents = document.getElementById('contents');
-                    //         contents.appendChild(inner);
-                    //     })
-
+                    importPage(contents);
+                    document.querySelectorAll('#contents > div > script').forEach(function(v){v.remove();});
+                    document.querySelector('#contents > script').remove();
+                    
                     // var xhr = new XMLHttpRequest();
                     // xhr.open('get', '/note/contents/' + menukey + '.html', true)
                     // xhr.send();
                     // xhr.onload = () => {
-                    //     document.getElementById('contents').className = 'page' + menukey;
-                    //     console.log(xhr.response);
-                    //     document.getElementById('contents').innerHTML = xhr.response;
+                        //     document.getElementById('contents').className = 'page' + menukey;
+                        //     console.log(xhr.response);
+                        //     document.getElementById('contents').innerHTML = xhr.response;
                     // }
                 }
             </script>

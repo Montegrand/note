@@ -3,3 +3,5 @@ float 으로 정렬 후 안의 요소 세로 가운데 정렬 시 item:after에 
 line-height:0; 지양 0px로 할 것
 
 버그로 inline 요소 간 4px 여백 font-size:0;로 지우기
+
+editor.formatOnPaste: true; // 붙여넣기 시 자동 포맷 사용시 CssSyntaxError 가 포커스를 출력창으로 훔쳐감 왜인지는 몰?루

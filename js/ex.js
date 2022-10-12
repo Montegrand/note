@@ -72,5 +72,23 @@ if (document.getElementById('contents').className === 'page1211') {
             html.classList.remove('scroll_stop');
             html.style.paddingRight = 0;
         })
+        // var circle = document.querySelector('.circle > div');
+        // circle.style.set
+        var y = 0;
+        const dd = setInterval(()=>{
+            if(y<180){
+                y++;
+            }else{
+                y=0;
+            }
+            writeCssVar(document.querySelector('.circle > div'), 'x', y+'%');
+        },30);
+        function writeCssVar(element, varName, value) {
+            return element.style.setProperty(`--${varName}`, value);
+        }
+        // function readCssVar(element, varName) {
+        //     const elementStyles = getConputedStyle(element);
+        //     return elementStyle.getPropertyValue(`--${varName}`).trim();
+        // }
     }
 }
