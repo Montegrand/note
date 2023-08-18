@@ -1,4 +1,4 @@
-import svgAni from '/js/svg-text-animation.js'
+import svgAni from './svg-text-animation.js'
 
 window.onload = ()=>{
     let svg = document.querySelector('#animation');
