@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="/js/jquery-1.12.4.HS-20200709.min.js"></script>
+        <script src="/js/slick.min.custom.1.8.0.11.js"></script>
+        <script src="/js/jquery.screen.min.js"></script>
+        <script src="/js/slick.extensions.min.js"></script>
+        <script type="module" src="/js/svg-text-animation.js"></script>
+        <script type="module" src="/js/ex.js"></script>
+        <title>Document</title>
+    </head>
+
+    <style>
+        body{margin:0;}
+        @keyframes flMv {
+            0%{transform:skew(0deg) translate(0, 0) ;}
+            50%{transform:skew(4deg) translate(-1%, -3%) ;}
+            100%{transform:skew(0deg) translate(0, 0) ;}
+        }
+
+        .svg_box{display:inline-block;width:800px;height:auto;}
+
+        svg{width:100%;height:auto;}
+        svg text{letter-spacing:-.025em;font-weight:500;color:#000;user-select:none;-webkit-user-select:none;}
+        svg #path{animation:flMv 4s infinite ease-in-out;}
+        svg .text_line:nth-child(1) text{font-size:30px}
+        svg .text_line:nth-child(2) text{font-size:70px;font-weight:600}
+        svg .text_line:nth-child(3) text{font-size:24px;font-weight:200}
+        svg tspan{transition-duration:.5s;transition-property:opacity;opacity:0;}
+        svg tspan.load{opacity:1;}
+        @media (max-width:1000px){
+        }
+    </style>
+
+    <body>
+        <div class="svg_box">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" id="animation">
+                <defs>
+                    <clipPath id="path" transform="translate(0 0)">
+                        <path transform="scale(6) translate(10 -40)" d="M104.682,55.047c-15.979-4.398-30.342,9.087-37.326,3.385   c-5.002-2.495,0.322-9.371,2.516-17.412c2.012-7.368,1.271-15.906-6.61-19.286c-6.94-2.974-14.384,3.553-14.323,9.702   c0.009,0.767,2.849,3.538,6.231-0.305c0,0,0.947-1.138,0.923-0.128c-0.021,1.009-0.864,4.331-3.715,5.012   c-1.255,0.3,0.283,1.472,0.881,4.649c0.512,2.717,2.021,15.578-11.072,14.71c-7.204-0.477-9.492-11.341-8.137-17.72   c1.307-6.144,6.004-11.538,5.363-13.022c-0.826-1.915-3.021,0.091-2.804-0.89c3.717-16.76-14.418-9.208-16.77,2.455   c-3.601,17.87,2.141,28.765,8.555,34.89c5.727,5.468,12.051,6.851,11.744,10.463c-0.492,5.815-2.349,17.509,2.989,25.623   c-3.006,5.351-6.936,9.563-7.258,15.16c-0.548,9.465,2.858,15.047,2.858,15.047s-6.086,4.028-4.572,5.861   c3.036,3.675,24.132,3.677,26.054,0.444c1.757-2.96-6.466-11.557-5.839-16.728c0.529-4.376,1.848-9.041,3.2-9.898   c2.938,4.638,13.295,14.841,32.14,9.207c1.6-0.478,2.356,5.001,5.222,5.205c4.454,0.318,6.046-18.137,1.484-24.82   c-1.254-1.838-4.666,1.909-11.455,2.971c-9.379,1.466-14.144-3.731-14.144-3.731c5.148-9.651,1.414-19.111,1.932-24.13   c19.431-9.182,30.128,3.008,33.737,1.429c2.49-1.09-0.725-4.283,0.926-3.605C117.72,73.817,120.131,59.299,104.682,55.047"/>
+                    </clipPath>
+                </defs>
+                <g id="svgImg" clip-path="url(#path)">
+                    <image class="svg_pc" width="1381" height="920" transform="translate(-392 -176)" xlink:href="/img/img.jpg" style="mix-blend-mode:overlay;isolation:isolate"></image>
+                </g>
+                <g class="text" clip-path="url(#path)">
+                    <g transform="translate(240 130)">
+                        <g transform="translate(0 0)" class="text_line">
+                            <text>자연 그리고 충주와 함께하는</text>
+                        </g>
+                        <g transform="translate(0 50)" class="text_line">
+                            <text>충주유기농체험교육센터</text>
+                        </g>
+                        <g transform="translate(0 140)" class="text_line">
+                            <text>Chungju Organic Farming Experience Education Center</text>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="sel_box">
+            <select name="" id="">
+                <option value="1_1">내용1</option>
+                <option value="1_2">내용2</option>
+                <option value="1_3">내용3</option>
+                <option value="1_4">내용4</option>
+            </select>
+            <button type="button" title="셀렉트 박스 열기" class="open">선택</button>
+            <ul>
+                <li><button type="button" title="">내용1</button></li>
+                <li><button type="button" title="">내용2</button></li>
+                <li><button type="button" title="">내용3</button></li>
+                <li><button type="button" title="">내용4</button></li>
+            </ul>
+        </div>
+        <div class="sel_box">
+            <select name="" id="">
+                <option value="2_1">내용1</option>
+                <option value="2_2">내용2</option>
+                <option value="2_3">내용3</option>
+                <option value="2_4">내용4</option>
+            </select>
+            <button type="button" title="셀렉트 박스 열기" class="open">선택</button>
+            <ul>
+                <li><button type="button" title="">내용1</button></li>
+                <li><button type="button" title="">내용2</button></li>
+                <li><button type="button" title="">내용3</button></li>
+                <li><button type="button" title="">내용4</button></li>
+            </ul>
+        </div>
+        <div class="sel_box">
+            <select name="" id="">
+                <option value="3_1">내용1</option>
+                <option value="3_2">내용2</option>
+                <option value="3_3">내용3</option>
+                <option value="3_4">내용4</option>
+            </select>
+            <button type="button" title="셀렉트 박스 열기" class="open">선택</button>
+            <ul>
+                <li><button type="button" title="">내용1</button></li>
+                <li><button type="button" title="">내용2</button></li>
+                <li><button type="button" title="">내용3</button></li>
+                <li><button type="button" title="">내용4</button></li>
+            </ul>
+        </div>
+        <!-- <script>
+            var body = $(document).find('body');
+
+            var $selBox = body.find('.sel_box');
+
+            /**
+            * 편의상 container를 body로
+             * element의 클래스는 편한걸로 쓰시고 box와 맞춰주세요.
+             * 변수명도 필요에 맞춰서 바꿔쓰시면 됩니다.
+            */
+            $selBox.each(function () {
+                var $selBox = $(this),
+                    $selc = $(this).find('select'),
+                    $opt = $selc.find('option'),
+                    $list = $(this).find('ul'),
+                    $btn = $list.find('button'),
+                    $openBtn = $(this).find('button.open');
+
+                // selbox on off
+                $openBtn.on('click', function () {
+                    //toggleClass 사용해도 됩니다만 혹시 몰라 지우고 삭제하는 걸로 했습니당
+                    //버튼 타이틀 바뀌는건 디자인에 따라 셀렉트 박스 active 후 보여야 하면 넣으시고 안보인다면 수정 안해도 될거에용
+                    if ($selBox.hasClass('active')) {
+                        $selBox.removeClass('active');
+                        $(this).attr('title', '셀렉트 박스 열기');
+                    } else {
+                        $selBox.addClass('active');
+                        $(this).attr('title', '셀렉트 박스 닫기');
+                    };
+                });
+
+                // btn select
+                $btn.on('click', function () {
+                    var index = $(this).closest('li').index();
+                    $(this).prop('title', '선택됨').closest('li').addClass('active').siblings().remove('active').removeAttr('title');
+                    $opt.eq(index).prop({
+                        'selected': true,
+                        'title': '선택됨'
+                    }).siblings().prop('selected', false).removeAttr('title');
+                    $openBtn.text($(this).text()).attr('title', '셀렉트 박스 열기');
+                    $selBox.removeClass('active');
+
+                    //선택값 확인
+                    console.log($selc.find(':selected').val());
+                });
+            });
+        </script> -->
+    </body>
+
+</html>
