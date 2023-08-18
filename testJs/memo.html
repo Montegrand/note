@@ -28,6 +28,7 @@
         svg tspan{transition-duration:.5s;transition-property:opacity;opacity:0;}
         svg tspan.load{opacity:1;}
         @media (max-width:1000px){
+        .svg_box{width:80%}
         }
     </style>
 
@@ -40,7 +41,7 @@
                     </clipPath>
                 </defs>
                 <g id="svgImg" clip-path="url(#path)">
-                    <image class="svg_pc" width="1381" height="920" transform="translate(-392 -176)" xlink:href="/img/img.jpg" style="mix-blend-mode:overlay;isolation:isolate"></image>
+                    <image class="svg_pc" width="1381" height="920" transform="translate(-392 -176)" xlink:href="" style="mix-blend-mode:overlay;isolation:isolate"></image>
                 </g>
                 <g class="text" clip-path="url(#path)">
                     <g transform="translate(240 130)">
@@ -57,98 +58,6 @@
                 </g>
             </svg>
         </div>
-        <div class="sel_box">
-            <select name="" id="">
-                <option value="1_1">내용1</option>
-                <option value="1_2">내용2</option>
-                <option value="1_3">내용3</option>
-                <option value="1_4">내용4</option>
-            </select>
-            <button type="button" title="셀렉트 박스 열기" class="open">선택</button>
-            <ul>
-                <li><button type="button" title="">내용1</button></li>
-                <li><button type="button" title="">내용2</button></li>
-                <li><button type="button" title="">내용3</button></li>
-                <li><button type="button" title="">내용4</button></li>
-            </ul>
-        </div>
-        <div class="sel_box">
-            <select name="" id="">
-                <option value="2_1">내용1</option>
-                <option value="2_2">내용2</option>
-                <option value="2_3">내용3</option>
-                <option value="2_4">내용4</option>
-            </select>
-            <button type="button" title="셀렉트 박스 열기" class="open">선택</button>
-            <ul>
-                <li><button type="button" title="">내용1</button></li>
-                <li><button type="button" title="">내용2</button></li>
-                <li><button type="button" title="">내용3</button></li>
-                <li><button type="button" title="">내용4</button></li>
-            </ul>
-        </div>
-        <div class="sel_box">
-            <select name="" id="">
-                <option value="3_1">내용1</option>
-                <option value="3_2">내용2</option>
-                <option value="3_3">내용3</option>
-                <option value="3_4">내용4</option>
-            </select>
-            <button type="button" title="셀렉트 박스 열기" class="open">선택</button>
-            <ul>
-                <li><button type="button" title="">내용1</button></li>
-                <li><button type="button" title="">내용2</button></li>
-                <li><button type="button" title="">내용3</button></li>
-                <li><button type="button" title="">내용4</button></li>
-            </ul>
-        </div>
-        <!-- <script>
-            var body = $(document).find('body');
-
-            var $selBox = body.find('.sel_box');
-
-            /**
-            * 편의상 container를 body로
-             * element의 클래스는 편한걸로 쓰시고 box와 맞춰주세요.
-             * 변수명도 필요에 맞춰서 바꿔쓰시면 됩니다.
-            */
-            $selBox.each(function () {
-                var $selBox = $(this),
-                    $selc = $(this).find('select'),
-                    $opt = $selc.find('option'),
-                    $list = $(this).find('ul'),
-                    $btn = $list.find('button'),
-                    $openBtn = $(this).find('button.open');
-
-                // selbox on off
-                $openBtn.on('click', function () {
-                    //toggleClass 사용해도 됩니다만 혹시 몰라 지우고 삭제하는 걸로 했습니당
-                    //버튼 타이틀 바뀌는건 디자인에 따라 셀렉트 박스 active 후 보여야 하면 넣으시고 안보인다면 수정 안해도 될거에용
-                    if ($selBox.hasClass('active')) {
-                        $selBox.removeClass('active');
-                        $(this).attr('title', '셀렉트 박스 열기');
-                    } else {
-                        $selBox.addClass('active');
-                        $(this).attr('title', '셀렉트 박스 닫기');
-                    };
-                });
-
-                // btn select
-                $btn.on('click', function () {
-                    var index = $(this).closest('li').index();
-                    $(this).prop('title', '선택됨').closest('li').addClass('active').siblings().remove('active').removeAttr('title');
-                    $opt.eq(index).prop({
-                        'selected': true,
-                        'title': '선택됨'
-                    }).siblings().prop('selected', false).removeAttr('title');
-                    $openBtn.text($(this).text()).attr('title', '셀렉트 박스 열기');
-                    $selBox.removeClass('active');
-
-                    //선택값 확인
-                    console.log($selc.find(':selected').val());
-                });
-            });
-        </script> -->
     </body>
 
 </html>
