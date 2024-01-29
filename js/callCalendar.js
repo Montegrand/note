@@ -27,7 +27,7 @@ function CalCalendar($calendar, years, month, data){
 
     today.setHours(0,0,0,0);
     var tableUnit = document.createElement('span'),
-        todayAnc = document.createElement('a'),
+        todayBtn = document.createElement('button'),
         table = document.createElement('table'),
         cap = document.createElement('caption'),
         colg = document.createElement('colgroup'),
@@ -40,8 +40,7 @@ function CalCalendar($calendar, years, month, data){
     todayAnc.innerText = '오늘 일정';
     todayAnc.className = 'call_today';
     todayAnc.setAttribute('title','금일 달력 불러오기');
-    todayAnc.href = './selectWebSchdulCalendar.do?key=455&schdulSeNo=1';
-    // todayAnc.addEventListener('click',function(){TodayCal($calendar,today,years,month,data)});
+    todayAnc.addEventListener('click',function(){TodayCal($calendar,today,years,month,data)});
 
     cap.innerText = years+'년도 '+(month+1)+'월 학사일정 - 요일별 정보 제공';
 
