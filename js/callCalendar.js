@@ -37,10 +37,10 @@ function CalCalendar($calendar, years, month, data){
     tableUnit.className = 'cal_month';
     tableUnit.innerText = (month+1)+'월';
 
-    todayAnc.innerText = '오늘 일정';
-    todayAnc.className = 'call_today';
-    todayAnc.setAttribute('title','금일 달력 불러오기');
-    todayAnc.addEventListener('click',function(){TodayCal($calendar,today,years,month,data)});
+    todayBtn.innerText = '오늘 일정';
+    todayBtn.className = 'call_today';
+    todayBtn.setAttribute('title','금일 달력 불러오기');
+    todayBtn.addEventListener('click',function(){TodayCal($calendar,today,years,month,data)});
 
     cap.innerText = years+'년도 '+(month+1)+'월 학사일정 - 요일별 정보 제공';
 
